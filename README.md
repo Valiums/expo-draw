@@ -1,24 +1,29 @@
-# Expo Draw
+# Expo Draw (Valiums's fork)
+
 Expo draw tool using react-native-svg. (Forked from [rn-draw](https://github.com/jayeszee/rn-draw))
 
 [![rn-draw.gif](https://s1.gifyu.com/images/rn-draw.gif)](https://gifyu.com/image/pLIr)
+
+`with color support`
+[![image0.png](https://cdn.discordapp.com/attachments/688484592348561446/888727147072589894/image0.png)](https://cdn.discordapp.com/attachments/688484592348561446/888727147072589894/image0.png)
 
 # Installation
 
 First install [react-native-svg](https://github.com/react-native-community/react-native-svg) `expo install react-native-svg`
 
-Then install expo-draw with `npm install --save @marangonieduardo/expo-draw` or `npm install --save git+https://github.com/MarangoniEduardo/expo-draw`
+Then install expo-draw with `npm install --save git+https://github.com/Valiums/expo-draw`
 
 # How to use
+
 ```
 import ExpoDraw from 'expo-draw'
-  
+
 <ExpoDraw
   strokes={[]}
   containerStyle={{backgroundColor: 'rgba(0,0,0,0.01)'}}
   rewind={(undo) => {this._undo = undo}}
   clear={(clear) => {this._clear = clear}}
-  color={'#000000'}
+  color={'#000000'} // you can change the color here. Each stroke will save its current color.
   strokeWidth={4}
   enabled={true}
   onChangeStrokes={(strokes) => console.log(strokes)}
@@ -48,7 +53,7 @@ You can save a screenshot of your canvas using `takeSnapshotAsync`, the method f
 
 ```
 import { captureRef as takeSnapshotAsync } from 'react-native-view-shot';
-  
+
 mySaveFx = async () => {
 	const signatureResult = await takeSnapshotAsync(this.refOfExpoDrawElement, {
 		result: 'tmpfile',
@@ -96,8 +101,17 @@ You can also save strokes array as json, for example, on firebase. In order to s
 ```
 
 # Context on why I forked
-As of the time I was implementing rn-draw, with expo SDK 36.0.0. I faced an error on the Svg.G dependency, which I then fixed for my expo application.
 
-So, I hope I can help whoever is facing issues with the rn-draw for expo. If you want to use the original lib, here it is! -> [rn-draw](https://github.com/jayeszee/rn-draw)
+This is actually a fork of a fork.
+I needed to add support for colors.
 
-**Observation:** I'm using it for digital signature capturing in my app, if you are looking for something like this, I would say this lib is pretty ok for the mentioned purpose!
+I created this fork because I don't think their repos are still being maintained.
+If you ever need color supports, use my fork at your own risk.
+I'll probably not maintain this.
+
+All the heavy work was actually done by
+[rn-draw](https://github.com/jayeszee/rn-draw)
+and
+[expo-draw](https://github.com/MarangoniEduardo/expo-draw)
+
+Credits goes to them!
