@@ -106,7 +106,9 @@ This is actually a fork of a fork.
 I needed to add support for colors.
 
 I created this fork because I don't think their repos are still being maintained so I couldn't do a PR.
-If you ever need color supports, use my fork at your own risk.
+
+If you ever need color supports, use my fork at your own risk. 
+They way I added support for colors is super hacky and probably really bad.
 I'll probably not maintain this.
 
 All the heavy work was actually done by
