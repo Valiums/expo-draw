@@ -105,7 +105,7 @@ You can also save strokes array as json, for example, on firebase. In order to s
 This is actually a fork of a fork.
 I needed to add support for colors.
 
-I created this fork because I don't think their repos are still being maintained.
+I created this fork because I don't think their repos are still being maintained so I couldn't do a PR.
 If you ever need color supports, use my fork at your own risk.
 I'll probably not maintain this.
 
